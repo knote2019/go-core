@@ -1,0 +1,21 @@
+
+
+
+安装gvm:
+https://www.golangtc.com/download
+下载 go1.9.2.windows-386.zip 包并解压：
+
+
+并设置下面两个环境变量即可：
+GOROOT
+GOBIN
+
+
+
+
+
+
+
+
+
+
