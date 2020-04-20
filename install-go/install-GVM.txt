@@ -1,0 +1,17 @@
+
+
+安装gvm:
+
+https://golang.org/dl/
+
+
+GOROOT=C:\Go
+Path=%GOROOT%\bin
+
+
+$ go version
+go version go1.14.2 windows/amd64
+
+
+
+
