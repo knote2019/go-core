@@ -18,3 +18,4 @@ func main() {
 	fmt.Printf("hello $s", "kangminghong")
 }
 
+
