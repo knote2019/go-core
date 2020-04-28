@@ -6,8 +6,8 @@ golang 创建属于自己的库
 https://studygolang.com/articles/28243
 
 
-
-
+在浏览器中运行go:
+https://play.golang.org/
 
 
 
