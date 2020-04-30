@@ -47,7 +47,12 @@ Go 1.13 及以上（推荐）
 
 $ go env -w GO111MODULE=on
 $ go env -w GOPROXY=https://goproxy.cn,direct
-完成。
+
+这个是七牛云提供的。
+
+
+阿里云的代理可试试：
+https://mirrors.aliyun.com/goproxy/
 
 
 =========================
