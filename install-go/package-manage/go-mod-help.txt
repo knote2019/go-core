@@ -27,5 +27,3 @@ The commands are:
 
 go init
 
-
-

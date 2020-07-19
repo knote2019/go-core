@@ -13,11 +13,3 @@ Path=%GOROOT%\bin
 $ go version
 go version go1.14.2 windows/amd64
 
-
-http://www.goland.vip 激活码
-
-
-
-Install golang on Ubuntu 18.04
-https://studygolang.com/articles/28235
-
