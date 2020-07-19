@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/labstack/echo"
 )
 
 type subject struct {
@@ -18,12 +17,7 @@ func main() {
 
 	fmt.Println("hello $s", "kangminghong")
 
-	var c1 Circle
-	c1.radius = 12.0
-	fmt.Println(c1.getArea())
+	// var c1 Circle
+	// c1.radius = 12.0
+	// fmt.Println(c1.getArea())
 }
-
-
-
-
-

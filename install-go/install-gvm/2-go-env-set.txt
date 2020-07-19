@@ -1,0 +1,25 @@
+
+
+go env -w GOROOT=C:\go14
+go env -w GOPATH=C:\Users\Kenny\.go
+
+go env -w GO111MODULE=on
+
+go env -w GOPROXY=https://goproxy.cn,direct
+go env -w GOPRIVATE=*.gitlab.com,*.gitee.com
+
+go env -w GOSUMDB=sum.golang.google.cn
+go env -w GOSUMDB=off
+
+
+注意：
+GOPATH如果在系统环境变量中设置了，用
+go env -w GOPATH=xxx
+提示报错。
+
+
+https://proxy.golang.org  #默认但国内不能访问
+https://goproxy.cn        #七牛云提供
+https://mirrors.aliyun.com/goproxy #阿里云提供
+
+
