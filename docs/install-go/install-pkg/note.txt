@@ -35,3 +35,15 @@ go.mod的结构包括, module, require, replace, exclude
 官方下包地址，go官方团队于2019年11月上线的集合go开发资源的网站：
 https://pkg.go.dev/
 
+
+
+git tag v2.0.0
+git push --tags
+git push master
+
+TODO
+https://studygolang.com/articles/26694?fr=sidebar
+如何"优雅"地发布 go module 模块
+
+
+
