@@ -1,0 +1,47 @@
+
+
+**********************************************************************************
+git clone https://github.com/startdusk/goutil.git
+
+go mod init github.com/startdusk/goutil
+
+vi goutil/hash/md5.go
+
+>>>
+package hash
+
+import (
+    "crypto/md5"
+    "encoding/hex"
+)
+
+func StringMd5(s string) string{
+    md5S :=md5.New()
+    md5S.Write([]byte(s))
+    return hex.EncodeToString(md5S.Sum(nil))
+}
+
+<<<
+
+git add .
+git commit -m "Add a md5 functions"
+git push
+
+
+待上传成功后,我们需要发布下代码,进入到git仓库goutil,点击release发布
+创建一个新的release,版本号默认为v0.0.0的格式,所以第一次发布我们写v0.1.0,然后添加一些说明
+发布成功后,我们可以来试试自己写的代码能否被使用:
+
+go get github.com/startdusk/goutil
+
+
+**********************************************************************************
+Kenny@DESKTOP-DSSG4G0 MINGW64 ~/GolandProjects/go-server (master)
+$ go mod init
+go: cannot determine module path for source directory C:\Users\Kenny\GolandProjects\go-server (outside GOPATH, module path must be specified)
+
+Example usage:
+        'go mod init example.com/m' to initialize a v0 or v1 module
+        'go mod init example.com/m/v2' to initialize a v2 module
+
+Run 'go help mod init' for more information.
