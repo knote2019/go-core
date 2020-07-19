@@ -25,3 +25,13 @@ import _ "fmt" #仅仅执行init()即可
 go mod tidy
 通俗来说就是将当前的库源码文件所依赖的包，
 全部安装并记录下来，多的包就删掉，少了的就自动补上.
+
+
+版本结构v(major).(minor).(patch)，如v0.1.0, v1.2.3, or v1.5.0。
+
+go.mod的结构包括, module, require, replace, exclude
+
+
+官方下包地址，go官方团队于2019年11月上线的集合go开发资源的网站：
+https://pkg.go.dev/
+
