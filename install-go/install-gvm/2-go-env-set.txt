@@ -18,8 +18,22 @@ go env -w GOPATH=xxx
 提示报错。
 
 
+GO111MODULE=on
+就会加载 $GOPATH/pkg/mod/下的包, 
+此时需要注意:
+go.mod 文件中需要 require 要 import 的包和版本号
+
+import "github.com/libp2p/go-libp2p" 就
+不会找 $GOPATH/src下, 而是找 $GOPATH/pkg 下找。
+
+
 https://proxy.golang.org  #默认但国内不能访问
 https://goproxy.cn        #七牛云提供
 https://mirrors.aliyun.com/goproxy #阿里云提供
+
+
+gobin的作用：用于指定编译后生成的可执行文件所在的目录。
+1. 如果不指定GOBIN，编译后的可执行文件默认放在GOPATH/bin下。
+2. 指定GOBIN，则无论GOPATH设置为什么，都只会放在指定的GOBIN下。
 
 

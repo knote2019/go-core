@@ -1,0 +1,19 @@
+
+
+Standard Go Project Layout
+
+https://github.com/golang-standards/project-layout
+
+./init
+./cmd
+./internal
+./pkg
+./api
+./scripts
+./build
+./test
+./docs
+./tools
+go.mod
+
+
