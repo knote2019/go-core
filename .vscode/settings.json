@@ -1,2 +1,8 @@
 {
+    "code-runner.executorMap": {
+        "go": "cd $workspaceRoot && go run .",
+    },
+    "code-runner.executorMapByGlob": {
+        "$workspaceRoot\\*.go": "go"
+    }
 }
