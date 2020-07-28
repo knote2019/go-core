@@ -1,0 +1,59 @@
+
+
+*************************************************************************
+type ComplexType
+type FloatType
+type IntegerType
+type Type
+type Type1
+type bool
+type byte
+type complex128
+type complex64
+type error
+type float32
+type float64
+type int
+type int16
+type int32
+type int64
+type int8
+type rune
+type string
+type uint
+type uint16
+type uint32
+type uint64
+type uint8
+type uintptr
+
+
+*************************************************************************
+Type is here for the purposes of documentation only. 
+It is a stand-in for any Go type, but represents the same type for any given function invocation.
+Type1 is here for the purposes of documentation only. 
+It is a stand-in for any Go type, but represents the same type for any given function invocation.
+
+
+The error built-in interface type is the conventional interface for representing an error condition, 
+with the nil value representing no error.
+###:
+type error interface {
+    Error() string
+}
+
+
+rune is an alias for int32 and is equivalent to int32 in all ways. 
+It is used, by convention, to distinguish character values from integer values.
+
+
+uint8 is the set of all unsigned 8-bit integers. Range: 0 through 255.
+
+
+uintptr is an integer type that is large enough to hold the bit pattern of any pointer.
+
+
+nil is a predeclared identifier representing the zero value for 
+a pointer, channel, func, interface, map, or slice type.
+
+

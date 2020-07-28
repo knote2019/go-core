@@ -13,8 +13,33 @@ var 创建变量
 烈建议用户在一个package中每个文件只写一个init函数。
 
 
+fallthrough：Go里面switch默认相当于每个case最后带有break，
+匹配成功后不会自动向下执行其他case，而是跳出整个switch, 
+但是可以使用fallthrough强制执行后面的case代码。
 
 
+可以声明一个未指定大小的数组来定义切片：
+var identifier []type
+或使用make()函数来创建切片:
+var slice1 []type = make([]type, len)
+也可以简写为
+slice1 := make([]type, len)
+
+PS:
+make([]T, length, capacity)
+其中capacity为可选参数。
 
 
+Go 语言中 range 关键字用于 for 循环中迭代数组(array)、切片(slice)、集合(map) 或者 通道(channel) 的元素。
+在数组和切片中它返回元素的索引和索引对应的值，在集合中返回 key-value 对。
+
+
+var map_variable map[key_data_type]value_data_type
+map_variable := make(map[key_data_type]value_data_type)
+
+
+var countryCapitalMap map[string]string
+countryCapitalMap["France"] = "巴黎"
+countryCapitalMap["Italy"] = "罗马"
+countryCapitalMap["Japan"] = "东京"
 
