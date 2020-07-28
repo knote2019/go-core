@@ -1,14 +1,12 @@
 package main
 
-import "fmt"
-
-func fuck(c chan int) {
-	data := <- c
-	fmt.Println(data)
-}
+import (
+	"flag"
+	"fmt"
+)
 
 func main() {
-	c := make(chan int)
-	go fuck(c)
-	c <- 12
+	var ip = flag.Int("flagname", 1234, "help message for flagname")
+	fmt.Println(ip)
+
 }

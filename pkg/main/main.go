@@ -12,10 +12,10 @@ type subject struct {
 func main() {
 	subj := subject{str: "world"}
 
-	fmt.Println("hello %s", subj.id)
-	fmt.Println("hello %s", subj.str)
+	fmt.Println("hello", subj.id)
+	fmt.Println("hello", subj.str)
 
-	fmt.Println("hello $s", "kangminghong")
+	fmt.Println("hello", "kangminghong")
 
 	// var c1 Circle
 	// c1.radius = 12.0

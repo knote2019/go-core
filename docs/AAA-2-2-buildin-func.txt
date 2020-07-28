@@ -38,6 +38,7 @@ delete
 
 panic、recover	
 两者均用于错误处理机制
+panic用于抛异常
 
 print、println
 底层打印函数，在部署环境中建议使用 fmt 包
