@@ -1,0 +1,8 @@
+
+
+这里的 dockerfile 基于golang:14 基础镜像拷贝源代码编译为可执行文件，
+并设置为容器的启动程序。
+
+
+docker run -d --name goserver -p 9000:9000 gocore:latest
+
