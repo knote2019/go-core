@@ -4,14 +4,14 @@ import (
 	"fmt"
 )
 
-func defer_call() {
+func deferCall() {
+	fmt.Println("begin")
 	defer func() { fmt.Println("AAA") }()
 	defer func() { fmt.Println("BBB") }()
 	defer func() { fmt.Println("CCC") }()
-	panic("kenny exception")
-	fmt.Println("test")
+	fmt.Println("end")
 }
 
 func main() {
-	defer_call()
+	deferCall()
 }

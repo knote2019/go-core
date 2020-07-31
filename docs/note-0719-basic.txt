@@ -43,3 +43,19 @@ countryCapitalMap["France"] = "巴黎"
 countryCapitalMap["Italy"] = "罗马"
 countryCapitalMap["Japan"] = "东京"
 
+
+包的路径以 GOPATH/src 为根路径，并以 / 为分隔符来分隔文件夹。
+想被别的包引用的标志符都需要大写首字母。
+导入不想用的包需要匿名导入，因为go不允许导入不使用的包。
+每个包导入的时候会自动调用init()函数。
+
+
+defer 函数在返回值赋值和return之间。
+
+
+GOOS=linux/windows/darwin
+
+go fmt xxx.go 用于格式化代码。
+
+iota 是常量计数器。
+

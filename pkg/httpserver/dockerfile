@@ -1,7 +1,8 @@
 FROM golang:1.14
 RUN mkdir /app 
 ADD . /app/
-WORKDIR /app 
-RUN go build -o main .
+WORKDIR /app
+#
+RUN GOPROXY="https://goproxy.cn,direct" go build -o main .
 EXPOSE 9000
 CMD ["./main"]
