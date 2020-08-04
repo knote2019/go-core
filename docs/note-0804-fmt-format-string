@@ -1,0 +1,77 @@
+
+
+1. Default formats and type
+Format	        Verb	Description
+
+[0 1]	        %v	    Default format
+[]int64{0, 1}	%#v	    Go-syntax format
+[]int64	        %T	    The type of the value
+
+
+2. Integer (indent, base, sign)
+Format	Verb	Description
+
+15	    %d	    Base 10
++15	    %+d	    Always show sign
+␣␣15	 %4d	 Pad with spaces (width 4, right justified)
+15␣␣	 %-4d	 Pad with spaces (width 4, left justified)
+0015	%04d	Pad with zeroes (width 4)
+1111	%b	    Base 2
+17	    %o	    Base 8
+f	    %x	    Base 16, lowercase
+F	    %X	    Base 16, uppercase
+0xf	    %#x	    Base 16, with leading 0x
+
+
+3. String or byte slice (quote, indent, hex)
+Format	        Verb	Description
+café	        %s	    Plain string
+␣␣café	         %6s	 Width 6, right justify
+café␣␣	         %-6s	 Width 6, left justify
+"café"	        %q	    Quoted string
+636166c3a9	    %x	    Hex dump of byte values
+63 61 66 c3 a9	% x	    Hex dump with spaces
+
+
+4. Character (quoted, Unicode)
+Format	    Verb	Description
+
+A	        %c	    Character
+'A'	        %q	    Quoted character
+U+0041	    %U	    Unicode
+U+0041'A'	%#U	    Unicode with character
+
+
+5. Boolean (true/false)
+Use %t to format a boolean as true or false.
+
+
+6. Pointer (hex)
+Use %p to format a pointer in base 16 notation with leading 0x.
+
+
+6. Float (indent, precision, scientific notation)
+Format	        Verb	Description
+
+1.234560e+02	%e	    Scientific notation
+123.456000	    %f	    Decimal point, no exponent
+123.46	        %.2f	Default width, precision 2
+␣␣123.46	     %8.2f	 Width 8, precision 2
+123.456	        %g	    Exponent as needed, necessary digits only
+
+
+7. Special values
+\a	U+0007 alert or bell
+\b	U+0008 backspace
+\\	U+005c backslash
+\t	U+0009 horizontal tab
+\n	U+000A line feed or newline
+\f	U+000C form feed
+\r	U+000D carriage return
+\v	U+000b vertical tab
+
+
+参考：
+https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/#default
+
+
