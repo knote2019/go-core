@@ -5,3 +5,11 @@ https://github.com/confluentinc/confluent-kafka-go
 
 "gopkg.in/confluentinc/confluent-kafka-go.v1/kafka"
 
+
+golang中比较好用的kafka client有
+1. sarama
+2. confluent-kafka-go
+3. go_kafka_client
+
+其中 sarama的使用者应该是最多的, 然后还有一个sarama的cluster版本 sarama-cluster
+
