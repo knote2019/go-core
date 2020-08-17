@@ -1,0 +1,5 @@
+
+
+http://c.biancheng.net/view/112.html
+第 12 行中，在json:和"type"之间增加了一个空格。这种写法没有遵守结构体标签的规则，因此无法通过 Tag.Get 获取到正确的 json 对应的值。
+
