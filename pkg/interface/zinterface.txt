@@ -1,0 +1,19 @@
+
+
+interface{}叫做空接口，空接口表示包含了0个方法的集合，
+由于任何类型都至少实现了0个方法，所以空接口可以承接任意类型。
+
+var i interface{}
+i = 42  //这个时候i就是int类型
+i = "hello" //这个时候i就是string类型
+
+空接口对切片的影响
+1.若将一个array或slice赋值给空接口，这个空接口无法再进行切片
+2.array或slice赋值给空接口的行为不是复制，而是类似指针效果，只不过无法再进行切片
+
+NOTE:
+空接口还可以承接指针变量
+
+nil interface的官方解释：Interface values with nil underlying values
+只有声明了但没赋值的interface才是nil interface，只要赋值了，即使赋了一个nil类型，也不是nil interface了
+

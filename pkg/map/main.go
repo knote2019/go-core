@@ -9,4 +9,11 @@ func main()  {
 		"Japan": "东京",
 	}
 	fmt.Println(personMap["France"])
+
+	funcMap := map[string][]string{
+		"111": {"1111", "11111"},
+		"222": {"2222", "22222"},
+	}
+	fmt.Println(funcMap)
+
 }
