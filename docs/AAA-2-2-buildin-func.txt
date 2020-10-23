@@ -1,5 +1,7 @@
 
 
+参考 buildin.go
+
 *************************************************************************
 func append(slice []Type, elems ...Type) []Type
 func cap(v Type) int

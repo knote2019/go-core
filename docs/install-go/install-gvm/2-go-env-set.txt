@@ -35,5 +35,3 @@ https://mirrors.aliyun.com/goproxy #阿里云提供
 gobin的作用：用于指定编译后生成的可执行文件所在的目录。
 1. 如果不指定GOBIN，编译后的可执行文件默认放在GOPATH/bin下。
 2. 指定GOBIN，则无论GOPATH设置为什么，都只会放在指定的GOBIN下。
-
-

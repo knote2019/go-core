@@ -5,11 +5,8 @@
 https://golang.org/dl/
 https://studygolang.com/dl #中文社区，下载更快
 
-
 GOROOT=C:\Go
 Path=%GOROOT%\bin
 
-
 $ go version
 go version go1.14.2 windows/amd64
-
