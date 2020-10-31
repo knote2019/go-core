@@ -3,39 +3,32 @@
 -----------------------------------------------------------------------
 在GO1.5之前用GOPATH以及GOROOT这两个环境变量来决定包的位置。
 
-
 从go 1.8开始，如果GOPATH没有被设置，会有一个默认值，
-在Unix上为$HOME/go，在Windows上为%USERPROFILE%/go
-
+Unix上为~/go
+Wins上为~/go
 
 GOPATH下会有3个目录：
 src目录：go编译时查找代码的地方;
 pkg目录：编译生成的lib文件存储的地方。
-bin目录：go get、godep这种bin工具的时候，二进制文件下载的目的地;
+bin目录：go get 等bin工具下载二进制文件的地方;
 
 go允许import不同代码库的代码，例如golang.org, k8s.io, github.com等等.
-
 
 import "fmt"
 import . "fmt"
 import f "fmt"
 import _ "fmt" #仅仅执行init()即可
 
-
 go mod tidy
 通俗来说就是将当前的库源码文件所依赖的包，
 全部安装并记录下来，多的包就删掉，少了的就自动补上.
-
 
 版本结构v(major).(minor).(patch)，如v0.1.0, v1.2.3, or v1.5.0。
 
 go.mod的结构包括, module, require, replace, exclude
 
-
 官方下包地址，go官方团队于2019年11月上线的集合go开发资源的网站：
 https://pkg.go.dev/
-
-
 
 git tag v2.0.0
 git push --tags
@@ -44,6 +37,3 @@ git push master
 TODO
 https://studygolang.com/articles/26694?fr=sidebar
 如何"优雅"地发布 go module 模块
-
-
-

@@ -50,4 +50,3 @@ Additional help topics:
         testfunc    testing functions
 
 Use "go help <topic>" for more information about that topic.
-

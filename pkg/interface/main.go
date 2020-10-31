@@ -12,8 +12,8 @@ type MyStruct struct {
 	X, Y int
 }
 
-func (a *MyStruct) add() int {
-	return a.X + a.Y
+func (s *MyStruct) add() int {
+	return s.X + s.Y
 }
 
 func (s *MyStruct) String() string {
