@@ -1,0 +1,12 @@
+
+
+若变量类型为 bool 类型，则名称应以 Has, Is, Can 或 Allow 开头：
+var isExist bool
+var hasConflict bool
+var canManage bool
+var allowGitHook bool
+
+func HasPrefix(name string, prefixes []string) bool { ... }
+func IsEntry(name string, entries []string) bool { ... }
+func CanManage(name string) bool { ... }
+func AllowGitHook() bool { ... }

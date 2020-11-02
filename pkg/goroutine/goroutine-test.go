@@ -9,16 +9,16 @@ import (
 
 func main() {
 
-	var ch = make(chan bool, 20000)
-	var begin = make(chan bool)
+	var dataChannel = make(chan bool, 20000)
+	var beginChannel = make(chan bool)
 
 	go func() {
 		runtime.LockOSThread()
-		<-begin
-		fmt.Println("begin")
+		<-beginChannel
+		fmt.Println("beginChannel")
 		tm := time.Now()
 		for i := 0; i < 10000000; i++ {
-			<-ch
+			<-dataChannel
 		}
 		fmt.Println(time.Now().Sub(tm))
 		os.Exit(0)
@@ -42,12 +42,12 @@ func main() {
 	for i := 0; i < 20; i++ {
 		go func() {
 			for {
-				ch <- true
+				dataChannel<- true
 			}
 		}()
 	}
 
 	fmt.Println("all start")
-	begin <- true
+	beginChannel<- true
 
 }

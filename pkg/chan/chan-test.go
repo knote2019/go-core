@@ -1,14 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-func fuck(c chan int) {
-	data := <-c
+func fuck(dataChannel chan int) {
+	data := <-dataChannel
 	fmt.Println(data)
 }
 
 func main() {
-	c := make(chan int)
-	go fuck(c)
-	c <- 12
+	dataChannel := make(chan int)
+	go fuck(dataChannel)
+	dataChannel<- 12
+	time.Sleep(time.Second)
 }

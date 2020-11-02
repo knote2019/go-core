@@ -8,10 +8,15 @@ import (
 func main()  {
 
 	personMap := map[string]string{
-		"France": "巴黎",
-		"Italy": "罗马",
-		"Japan": "东京",
+		"France": "France capital",
+		"Italy": "Italy capital",
+		"Japan": "Japan capital",
 	}
+
+	for k, v := range personMap{
+		fmt.Printf("k=%s, v=%s\n", k, v)
+	}
+
 	fmt.Println(personMap["France"])
 
 	funcMap := map[string][]string{

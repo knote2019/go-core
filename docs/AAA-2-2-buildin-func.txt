@@ -3,30 +3,33 @@
 参考 buildin.go
 
 *************************************************************************
-func append(slice []Type, elems ...Type) []Type
-func cap(v Type) int
-func close(c chan<- Type)
-func complex(r, i FloatType) ComplexType
-func copy(dst, src []Type) int
-func delete(m map[Type]Type1, key Type)
-func imag(c ComplexType) FloatType
-func len(v Type) int
-func make(t Type, size ...IntegerType) Type
 func new(Type) *Type
+func make(t Type, size ...IntegerType) Type
+
+func len(v Type) int
+func cap(v Type) int
+
+func append(slice []Type, elems ...Type) []Type
+func copy(dst, src []Type) int
+
+func delete(m map[Type]Type1, key Type)
+
+func close(c chan<- Type)
+
 func panic(v interface{})
-func print(args ...Type)
-func println(args ...Type)
-func real(c ComplexType) FloatType
 func recover() interface{}
 
+func complex(r, i FloatType) ComplexType
+func real(c ComplexType) FloatType
+func imag(c ComplexType) FloatType
+
+func print(args ...Type)
+func println(args ...Type)
 
 *************************************************************************
 new、make
 new 和 make 均是用于分配内存：new 用于值类型和用户定义的类型，如自定义结构，
 make 用于内置引用类型（切片、map 和管道）。
-
-close
-用于管道通信
 
 len、cap
 len 用于返回某个类型的长度或数量（字符串、数组、切片、map 和管道）；
@@ -38,12 +41,17 @@ copy、append
 delete
 按照指定的键将元素从映射中删除
 
-panic、recover	
+close
+用于管道通信
+
 两者均用于错误处理机制
 panic用于抛异常
 
-print、println
-底层打印函数，在部署环境中建议使用 fmt 包
-
 complex、real、imag
 用于创建和操作复数
+Go提供了两种大小的复数类型：complex64和complex128，
+分别由float32和float64组成。内置函数complex从指定的实部和虚部构建复数，
+内置函数real和imag用来获取复数的实部和虚部：
+
+print、println
+底层打印函数，在部署环境中建议使用 fmt 包
