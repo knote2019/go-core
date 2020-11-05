@@ -34,7 +34,7 @@ func (us UserResource) updateUser(req *restful.Request, res *restful.Response) {
 	err := req.ReadEntity(&user)
 	if err == nil {
 		us.users[user.Name] = user
-		res.WriteHeaderAndEntity(http.StatusCreated, user)
+		res.WriteHeaderAndEntity(http.StatusOK, user)
 	} else {
 		res.AddHeader("Content-Type", "text/plain")
 		res.WriteErrorString(http.StatusInternalServerError, err.Error())
