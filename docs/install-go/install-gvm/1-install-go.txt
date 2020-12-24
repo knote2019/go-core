@@ -2,11 +2,13 @@
 
 安装gvm:
 
+下载地址：
 https://golang.org/dl/
-https://studygolang.com/dl #中文社区，下载更快
+https://www.gomirrors.org/
+https://studygolang.com/dl
 
 GOROOT=C:\Go
 Path=%GOROOT%\bin
 
 $ go version
-go version go1.14.2 windows/amd64
+go version go1.15.6 windows/amd64

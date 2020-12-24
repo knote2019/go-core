@@ -1,37 +1,21 @@
 
 
-go env -w GOROOT=C:\go14
-go env -w GOPATH=C:\Users\Kenny\.go
+默认安装 配置如下了：
+GOROOT=c:\go
+GOPATH=C:\Users\emigkag\go
 
+修改如下配置：
 go env -w GO111MODULE=on
-
 go env -w GOPROXY=https://goproxy.cn,direct
-go env -w GOPRIVATE=*.gitlab.com,*.gitee.com
 
-go env -w GOSUMDB=sum.golang.google.cn
-go env -w GOSUMDB=off
-
-
-注意：
-GOPATH如果在系统环境变量中设置了，用
-go env -w GOPATH=xxx
-提示报错。
-
-
-GO111MODULE=on
-就会加载 $GOPATH/pkg/mod/下的包, 
-此时需要注意:
-go.mod 文件中需要 require 要 import 的包和版本号
-
-import "github.com/libp2p/go-libp2p" 就
-不会找 $GOPATH/src下, 而是找 $GOPATH/pkg 下找。
-
-
+NOTE: 参考 GOPROXY:
 https://proxy.golang.org  #默认但国内不能访问
 https://goproxy.cn        #七牛云提供
 https://mirrors.aliyun.com/goproxy #阿里云提供
 
+go env -w GOSUMDB=sum.golang.google.cn
+go env -w GOSUMDB=off
 
-gobin的作用：用于指定编译后生成的可执行文件所在的目录。
-1. 如果不指定GOBIN，编译后的可执行文件默认放在GOPATH/bin下。
-2. 指定GOBIN，则无论GOPATH设置为什么，都只会放在指定的GOBIN下。
+下载包：
+go get github.com/confluentinc/confluent-kafka-go@v1.5.2
+然后可以在 $GOPATH/pkg/mod/ 下找到。
