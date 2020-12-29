@@ -1,0 +1,1 @@
+golang提供了syslog 包，只需要调用Dial()，就可以连接syslog服务器，然后发送消息。
