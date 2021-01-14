@@ -26,3 +26,4 @@ The commands are:
 
 
 go init
+go mod download

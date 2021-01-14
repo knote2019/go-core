@@ -1,0 +1,17 @@
+FROM golang:1.15-alpine AS build
+
+#>>>
+RUN mkdir /app
+
+COPY . /app
+WORKDIR /app
+
+RUN set -x \
+&& go mod download \
+&& CGO_ENABLED=0 GOOS=linux go build -o myapp \
+&& echo "end"
+
+#>>>
+FROM centos8-cloud-base AS final
+COPY --from=build /app/myapp .
+CMD ["/myapp"]
