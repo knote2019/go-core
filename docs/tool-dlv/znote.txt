@@ -1,0 +1,9 @@
+
+
+docker run -d --name cloud-go --hostname cloud-go cloud-go
+
+git clone https://github.com/go-delve/delve.git
+cd delve/cmd/dlv
+go build
+
+然后可以看到一个dlv的二进制文件。
