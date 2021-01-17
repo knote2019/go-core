@@ -35,13 +35,5 @@ git push
 go get github.com/startdusk/goutil
 
 
-**********************************************************************************
-Kenny@DESKTOP-DSSG4G0 MINGW64 ~/GolandProjects/go-server (master)
-$ go mod init
-go: cannot determine module path for source directory C:\Users\Kenny\GolandProjects\go-server (outside GOPATH, module path must be specified)
-
-Example usage:
-        'go mod init example.com/m' to initialize a v0 or v1 module
-        'go mod init example.com/m/v2' to initialize a v2 module
-
-Run 'go help mod init' for more information.
+官方 go mod 资料：
+https://github.com/golang/go/wiki/Modules
