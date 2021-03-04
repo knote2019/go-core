@@ -7,9 +7,9 @@ import (
 
 func main() {
 	fmt.Printf("timestamp(secondes):%v;\n", time.Now().Unix())
-	fmt.Printf("timestamp(secondes):%v;\n",time.Now().UnixNano() / 1e9)
-	fmt.Printf("timestamp(m secondes):%v;\n",time.Now().UnixNano() / 1e6)
-	fmt.Printf("timestamp(n secondes):%v;\n",time.Now().UnixNano())
+	fmt.Printf("timestamp(secondes):%v;\n", time.Now().UnixNano()/1e9)
+	fmt.Printf("timestamp(m secondes):%v;\n", time.Now().UnixNano()/1e6)
+	fmt.Printf("timestamp(n secondes):%v;\n", time.Now().UnixNano())
 
 	// sleep 5 seconds
 	fmt.Println(time.Now())

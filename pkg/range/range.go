@@ -7,22 +7,5 @@ func main() {
 	for i, v := range a {
 		fmt.Println(i, v)
 	}
-	
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

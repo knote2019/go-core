@@ -42,12 +42,12 @@ func main() {
 	for i := 0; i < 20; i++ {
 		go func() {
 			for {
-				dataChannel<- true
+				dataChannel <- true
 			}
 		}()
 	}
 
 	fmt.Println("all start")
-	beginChannel<- true
+	beginChannel <- true
 
 }

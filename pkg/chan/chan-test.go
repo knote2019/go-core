@@ -13,6 +13,6 @@ func fuck(dataChannel chan int) {
 func main() {
 	dataChannel := make(chan int)
 	go fuck(dataChannel)
-	dataChannel<- 12
+	dataChannel <- 12
 	time.Sleep(time.Second)
 }

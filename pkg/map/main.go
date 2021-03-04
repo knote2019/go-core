@@ -5,15 +5,15 @@ import (
 	"reflect"
 )
 
-func main()  {
+func main() {
 
 	personMap := map[string]string{
 		"France": "France capital",
-		"Italy": "Italy capital",
-		"Japan": "Japan capital",
+		"Italy":  "Italy capital",
+		"Japan":  "Japan capital",
 	}
 
-	for k, v := range personMap{
+	for k, v := range personMap {
 		fmt.Printf("k=%s, v=%s\n", k, v)
 	}
 
@@ -25,10 +25,9 @@ func main()  {
 	}
 	fmt.Println(funcMap)
 
+	m1 := map[string]interface{}{"a": "1", "b": 2, "c": 3}
+	m2 := map[string]interface{}{"a": 1, "c": "3", "b": 2}
 
-	m1:=map[string]interface{}{"a":"1", "b":2, "c":3};
-	m2:=map[string]interface{}{"a":1, "c":"3", "b":2};
-
-	fmt.Println(reflect.DeepEqual(m1["a"],m2["a"]))
-	fmt.Println(reflect.DeepEqual(m1["b"],m2["b"]))
+	fmt.Println(reflect.DeepEqual(m1["a"], m2["a"]))
+	fmt.Println(reflect.DeepEqual(m1["b"], m2["b"]))
 }

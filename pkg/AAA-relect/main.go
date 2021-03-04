@@ -7,10 +7,10 @@ import (
 
 type Person struct {
 	Name string
-	Age int `min:"0" max:"100"`
+	Age  int `min:"0" max:"100"`
 }
 
-func main()  {
+func main() {
 	p := Person{Name: "kenny", Age: 30}
 	pType := reflect.TypeOf(p)
 	pValue := reflect.ValueOf(p)

@@ -10,5 +10,4 @@ func main() {
 	mjson, _ := json.Marshal(m)
 	mString := string(mjson)
 	fmt.Printf("print mString:%s", mString)
-
 }

@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func init()  {
+func init() {
 	fmt.Println("init invoked")
 }
 
-func main()  {
+func main() {
 	fmt.Println("main invoked")
 }

@@ -7,7 +7,7 @@ func main() {
 
 	// 开N个后台打印线程
 	for i := 0; i < cap(dataChannel); i++ {
-		go func(){
+		go func() {
 			fmt.Println("hello kenny")
 			dataChannel <- 1
 		}()

@@ -8,7 +8,7 @@ import (
 // TODO: fix bug
 func main() {
 	// 如果network是空，Dial会连接到本地的syslog服务器。
-	sysLog, err := syslog.Dial("", "",syslog.LOG_ERR, "Saturday")
+	sysLog, err := syslog.Dial("", "", syslog.LOG_ERR, "Saturday")
 	if err != nil {
 		log.Fatal(err)
 	}

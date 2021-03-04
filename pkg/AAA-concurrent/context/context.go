@@ -14,7 +14,7 @@ func worker(ctx context.Context, wg *sync.WaitGroup, number int) error {
 		select {
 		default:
 			fmt.Println("hello")
-		case <- ctx.Done():
+		case <-ctx.Done():
 			return ctx.Err()
 		}
 	}

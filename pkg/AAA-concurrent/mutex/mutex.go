@@ -10,7 +10,7 @@ func main() {
 	var mu sync.Mutex
 
 	mu.Lock()
-	go func(){
+	go func() {
 		fmt.Println("hello")
 		mu.Unlock()
 	}()

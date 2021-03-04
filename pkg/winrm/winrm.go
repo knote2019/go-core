@@ -21,4 +21,3 @@ func main() {
 	fmt.Println(aaa)
 	fmt.Println(bbb)
 }
-
