@@ -29,7 +29,15 @@ func println(args ...Type)
 *************************************************************************
 new、make
 new 和 make 均是用于分配内存：new 用于值类型和用户定义的类型，如自定义结构，
-make 用于内置引用类型（切片、map 和管道）。
+make 只用于创建内置引用类型（切片、map 和管道）。
+它返回的类型就是这三个类型本身，而不是他们的指针类型，
+因为这三种类型就是引用类型，所以就没有必要返回他们的指针了。
+    person := make(map[string]string) // make 不会回传指针
+    fmt.Println(*person) // invalid indirect of person
+
+var p1 *int <等价于> p1 := new(int)
+i := 0
+p1 = &i
 
 len、cap
 len 用于返回某个类型的长度或数量（字符串、数组、切片、map 和管道）；

@@ -2,35 +2,31 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
-//发送者
-func sender(c chan int) {
-	for i := 0; i < 100; i++ {
-		c <- i
-		if i >= 5 {
-			time.Sleep(time.Second * 7)
-		} else {
-			time.Sleep(time.Second)
-		}
-	}
+type Book struct {
+	title   string
+	author  string
+	subject string
+	bookId  int
+}
+
+func printBook(book *Book) {
+	//fmt.Println(book.title)
+	//fmt.Println(book.bookId)
 }
 
 func main() {
-	//c := make(chan int)
-	//go sender(c)
-	timeout := time.After(time.Second * 3)
-	for {
-		select {
-		//case d := <-c:
-		//	fmt.Println(d)
-		case <-timeout:
-			fmt.Println("这是定时操作任务 >>>>>")
-			//case dd := <-time.After(time.Second * 3):
-			//	fmt.Println(dd, "这是超时*****")
-		}
+	b1 := Book{
+		title:  "aaa",
+		bookId: 1}
 
-		fmt.Println("for end")
-	}
+	printBook(&b1)
+	slice1 := new([]int)
+	slice2 := *new([]int)
+
+	fmt.Println(slice1)
+	fmt.Println(slice2)
+	//person := make(map[string]string)
+	//fmt.Println(*person) // invalid indirect of person
 }

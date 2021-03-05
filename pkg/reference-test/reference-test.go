@@ -23,11 +23,11 @@ func changeMap(m map[int]string) {
 }
 
 func main() {
-	// transfer value for value and array
+	// value 和 array 本身是值类型
 	value1 := "aaa"
 	array1 := [3]string{"aaa", "bbb", "ccc"}
 
-	// transfer pointer for slice and map
+	// slice 和 map 本身就是引用类型
 	slice1 := []string{"aaa", "bbb", "ccc"}
 	map1 := map[int]string{
 		0: "aaa",
@@ -39,6 +39,10 @@ func main() {
 
 	fmt.Printf("array old addr = %p {%v}\n", &array1, array1)
 	changeArray(array1)
+
+	//make 只用于创建内置引用类型（切片、map 和管道）。
+	//它返回的类型就是这三个类型本身，而不是他们的指针类型，
+	//因为这三种类型就是引用类型，所以就没有必要返回他们的指针了。
 
 	fmt.Printf("slice old addr = %p {%v}\n", slice1, slice1)
 	changeSlice(slice1)
