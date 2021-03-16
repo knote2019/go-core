@@ -17,3 +17,4 @@ NOTE:
 nil interface的官方解释：Interface values with nil underlying values
 只有声明了但没赋值的interface才是nil interface，只要赋值了，即使赋了一个nil类型，也不是nil interface了
 
+接口貌似可以理解成包含0到多个函数类型的类型 @@@

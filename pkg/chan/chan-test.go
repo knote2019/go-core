@@ -46,3 +46,6 @@ func main() {
 		}
 	}
 }
+
+// note:
+//select 的每个case必须是一个IO操作。（限制）
