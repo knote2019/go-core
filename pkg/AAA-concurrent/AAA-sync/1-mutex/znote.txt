@@ -1,0 +1,11 @@
+
+
+unique_lock是个类模板，工作中，一般lock_guard(推荐使用)；
+lock_guard取代了mutex的lock()和unlock();
+
+lock_guard可以带第二个参数：
+std::lock_guard<std::mutex> sbguard1(my_mutex1, std::try_to_lock);
+>>>
+std::try_to_lock
+std::defer_lock
+std::adopt_lock

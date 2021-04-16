@@ -34,5 +34,3 @@ func main() {
 
 	wg.Wait()
 }
-
-// 当main函数完成工作前，通过调用cancel()来通知后台Goroutine退出，这样就避免了Goroutine的泄漏。
